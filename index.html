@@ -12,8 +12,8 @@
       font-family: sans-serif;
     }
 
-    .search-input input,
-    .search-input button {
+    input,
+    button {
       background: white;
       color: #444;
       border: 1px solid #888;
@@ -29,12 +29,32 @@
     .avatar {
       float: right;
     }
+
+    .modal {
+      position: fixed;
+      background: rgba(0,0,0,0.2);
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .modal-dialog {
+      background: white;
+      padding: 1em;
+      flex: 0;
+      align-self: space-around;
+      box-shadow: 1px 3px 8px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
-  <script src="/_compile/Main.elm"></script>
+  <script src="/_compile/ModalMain.elm"></script>
   <script>
-    var app = Elm.Main.fullscreen();
+    var app = Elm.ModalMain.fullscreen();
   </script>
 </body>
 </html>

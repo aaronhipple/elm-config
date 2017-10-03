@@ -4,6 +4,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import RepoSearch.Config exposing (..)
 import RepoSearch.Types exposing (..)
+import RepoSearch.State exposing (..)
 import RepoSearch.Rest exposing (..)
 
 
@@ -15,32 +16,6 @@ app config =
         , subscriptions = subscriptions config
         , view = view config
         }
-
-
-init : Config -> ( Model, Cmd Msg )
-init config =
-    ( { results = []
-      , searchInput = ""
-      , errors = []
-      }
-    , Cmd.none
-    )
-
-
-update : Config -> Msg -> Model -> ( Model, Cmd Msg )
-update config msg model =
-    case msg of
-        UpdateSearch newInput ->
-            ( { model | searchInput = newInput }, Cmd.none )
-
-        PerformSearch ->
-            ( model, repoSearch config model.searchInput )
-
-        NewResults (Ok results) ->
-            ( { model | results = results }, Cmd.none )
-
-        NewResults (Err err) ->
-            ( { model | errors = err :: model.errors }, Cmd.none )
 
 
 subscriptions : Config -> Model -> Sub Msg
@@ -56,4 +31,5 @@ view config model =
             [ h1 [] [ text "Results" ]
             , div [] <| List.map config.searchResultView model.results
             ]
+        , config.modalView model.modals
         ]
