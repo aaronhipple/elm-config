@@ -1,10 +1,10 @@
-module Config exposing (Config, config)
+module RepoSearch.Config exposing (Config, config)
 
-import SearchResult.Types exposing (SearchResult)
-import SearchResult.View exposing (renderSearchResult)
-import SearchResult.Decoder exposing (decodeSearchResults)
-import SearchInput.View exposing (renderSearchInput)
-import Types exposing (..)
+import RepoSearch.SearchResult.Types exposing (SearchResult)
+import RepoSearch.SearchResult.View exposing (renderSearchResult)
+import RepoSearch.SearchResult.Decoder exposing (decodeSearchResults)
+import RepoSearch.SearchInput.View exposing (renderSearchInput)
+import RepoSearch.Types exposing (..)
 import Json.Decode as Decode
 import Html exposing (Html)
 

@@ -1,10 +1,10 @@
-module App exposing (app)
+module RepoSearch.App exposing (app)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Config exposing (..)
-import Types exposing (..)
-import Rest exposing (..)
+import RepoSearch.Config exposing (..)
+import RepoSearch.Types exposing (..)
+import RepoSearch.Rest exposing (..)
 
 
 app : Config -> Program Never Model Msg

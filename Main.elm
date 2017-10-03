@@ -1,7 +1,7 @@
 module Main exposing (..)
 
-import Config exposing (..)
-import App exposing (app)
+import RepoSearch.Config exposing (..)
+import RepoSearch.App exposing (app)
 
 
 main =

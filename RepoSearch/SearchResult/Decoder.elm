@@ -1,7 +1,7 @@
-module SearchResult.Decoder exposing (..)
+module RepoSearch.SearchResult.Decoder exposing (..)
 
 import Json.Decode exposing (..)
-import SearchResult.Types exposing (..)
+import RepoSearch.SearchResult.Types exposing (..)
 
 
 decodeSearchResults : Decoder (List SearchResult)

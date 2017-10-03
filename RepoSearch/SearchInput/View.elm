@@ -1,6 +1,6 @@
-module SearchInput.View exposing (..)
+module RepoSearch.SearchInput.View exposing (..)
 
-import Types exposing (Msg, Msg(..))
+import RepoSearch.Types exposing (Msg, Msg(..))
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput, onSubmit)

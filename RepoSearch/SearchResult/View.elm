@@ -1,7 +1,7 @@
-module SearchResult.View exposing (..)
+module RepoSearch.SearchResult.View exposing (..)
 
-import SearchResult.Types exposing (..)
-import Types exposing (Msg)
+import RepoSearch.SearchResult.Types exposing (..)
+import RepoSearch.Types exposing (Msg)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 

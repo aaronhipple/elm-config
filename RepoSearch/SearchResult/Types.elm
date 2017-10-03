@@ -1,4 +1,4 @@
-module SearchResult.Types exposing (..)
+module RepoSearch.SearchResult.Types exposing (..)
 
 
 type alias SearchResult =

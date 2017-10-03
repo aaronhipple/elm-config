@@ -1,7 +1,7 @@
-module Rest exposing (repoSearch)
+module RepoSearch.Rest exposing (repoSearch)
 
-import Types exposing (Msg, Msg(..))
-import Config exposing (Config)
+import RepoSearch.Types exposing (Msg, Msg(..))
+import RepoSearch.Config exposing (Config)
 import Http
 
 

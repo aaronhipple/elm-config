@@ -1,6 +1,6 @@
-module Types exposing (..)
+module RepoSearch.Types exposing (..)
 
-import SearchResult.Types exposing (..)
+import RepoSearch.SearchResult.Types exposing (..)
 import Http
 
 
