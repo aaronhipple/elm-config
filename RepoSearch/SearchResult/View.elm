@@ -9,9 +9,7 @@ import Html.Attributes exposing (..)
 renderSearchResult : SearchResult -> Html Msg
 renderSearchResult result =
     article [ class "search-result", id <| toString result.id ]
-        [ h4 []
-            [ a [ href result.url ] [ text result.full_name ] ]
-        , a [ href result.url ]
+        [ a [ href result.url, class "avatar" ]
             [ img
                 [ src result.owner.avatar_url
                 , alt result.owner.login
@@ -19,6 +17,8 @@ renderSearchResult result =
                 ]
                 []
             ]
+        , h4 []
+            [ a [ href result.url ] [ text result.full_name ] ]
         , p [] [ text <| Maybe.withDefault "Unknown Language" result.language ]
         , p [] [ text <| Maybe.withDefault "" result.description ]
         ]
